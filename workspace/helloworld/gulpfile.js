@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 
 //webpackでのビルド
 gulp.task('js', function(){
-  gulp.src('./app.js')
+  return gulp.src('./app.js')
     .pipe(webpack({
       output: {
         filename: 'bundle.js',
