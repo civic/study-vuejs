@@ -1,9 +1,10 @@
 import Vue from 'vue'
 
-new Vue({
+var vm = new Vue({
   el: '#app',
   data: {
     newTodo: '',
+    greeting: false,
     message: 'Hello Vue.js!',
     todos: [
       {text: 'Learn Javascript'},
@@ -24,3 +25,5 @@ new Vue({
     }
   }
 });
+
+window.vm = vm;

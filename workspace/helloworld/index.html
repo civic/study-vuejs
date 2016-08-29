@@ -5,8 +5,10 @@
 </head>
 <body>
   <div id="app">
+    <p>{{message}}</p>
     <input v-model="newTodo" v-on:keyup.enter="addTodo">
     <ul>
+      <div v-if="greeting">{{message}}</div>
       <li v-for="todo in todos">
         <span>{{ todo.text}}</span>
         <button v-on:click="removeTodo($index)">x</button>
