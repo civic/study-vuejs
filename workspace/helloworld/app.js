@@ -13,14 +13,14 @@ var vm = new Vue({
     ]
   },
   methods: {
-    addTodo: function(){
+    addTodo(){
       var text = this.newTodo.trim();
       if (text) {
         this.todos.push({text: text});
         this.newTodo = ''
       }
     },
-    removeTodo: function(index){
+    removeTodo(index){
       this.todos.splice(index, 1);
     }
   }
