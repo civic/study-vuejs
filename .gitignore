@@ -1,3 +1,4 @@
 node_modules
 workspace/prj-*
 .idea
+npm-debug.log
