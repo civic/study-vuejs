@@ -1,9 +1,10 @@
 import Vue from 'vue'
+import './numpad'
 
 var vm = new Vue({
   el: '#app',
   data: {
-    a: 0,
+    a: 1,
     b: 0,
     op: null
   },
@@ -23,12 +24,6 @@ var vm = new Vue({
     }
   },
   methods: {
-    onClickA: function(a){
-      this.a = a;
-    },
-    onClickB: function(b){
-      this.b = b;
-    },
     onClickOp: function(op){
       this.op = op;
     }
