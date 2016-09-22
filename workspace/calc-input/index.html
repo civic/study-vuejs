@@ -14,20 +14,29 @@
     <div>
       A:
       <template v-for="n in 10">
-        <button v-on:click="onClickA(n)">{{n}}</button>
+        <label>
+        <input type="radio" value="{{n}}" v-model="a"/>
+        {{n}}
+        </label>
       </template>
     </div>
 
     <div>
       <template v-for="s in ['+', '-', '*', '/']">
-        <button v-bind:class="{'selected-op': op == s}" v-on:click="onClickOp(s)">{{s}}</button>
+        <label v-bind:class="{'selected-op': op == s}" >
+          <input type="radio" value="{{s}}" v-model="op"/>
+          {{s}}
+        </label>
       </template>
     </div>
 
     <div>
       B:
       <template v-for="n in 10">
-        <button v-on:click="onClickB(n)">{{n}}</button>
+        <label>
+        <input type="radio" value="{{n}}" v-model="b"/>
+        {{n}}
+        </label>
       </template>
     </div>
 
