@@ -31,11 +31,11 @@ gulp.task('dev', ["js"], function(){
       baseDir: '.'
     },
     files: [
-      { match: ['app.js', '*.html'] }
+      { match: ['bundle.js', '*.html'] }
     ],
     open: true
   });
-  gulp.watch(['app.js', '*.html'], ['js']);
+  gulp.watch(['*.js', '*.html'], ['js']);
 });
 
 gulp.task('build', ['js']);

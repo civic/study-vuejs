@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import './MyComponent'
+
 
 var vm = new Vue({
   el: '#app',
