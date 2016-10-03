@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import './numpad'
+import NumPad from './numpad.vue'
 
 var vm = new Vue({
   el: '#app',
@@ -7,6 +7,9 @@ var vm = new Vue({
     a: 1,
     b: 0,
     op: null
+  },
+  components: {
+    numpad: NumPad
   },
   computed: {
     c: function(){

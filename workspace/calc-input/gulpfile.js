@@ -17,6 +17,10 @@ gulp.task('js', function(){
             test: /\.js$/,
             loader: 'babel',
             exclude: /node_modules/
+          },
+          {
+            test: /\.vue$/,
+            loader: 'vue'
           }
         ]
       }
@@ -35,7 +39,7 @@ gulp.task('dev', ["js"], function(){
     ],
     open: true
   });
-  gulp.watch(['*.js', '*.html'], ['js']);
+  gulp.watch(['*.js', '!bundle.js', '*.html', '*.vue'], ['js']);
 });
 
 gulp.task('build', ['js']);
