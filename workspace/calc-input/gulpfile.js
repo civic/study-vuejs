@@ -23,6 +23,11 @@ gulp.task('js', function(){
             loader: 'vue'
           }
         ]
+      },
+      resolve: {
+        alias: {
+          vue: 'vue/dist/vue.js'
+        }
       }
     }))
     .pipe(gulp.dest('./'));

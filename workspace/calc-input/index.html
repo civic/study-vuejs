@@ -13,13 +13,13 @@
 
     <div>
       A:
-      <numpad v-bind:num.sync="a"/>
+      <numpad :defnum="a" v-on:num-changed="onNumChangedA"/>
     </div>
 
     <div>
       <template v-for="s in ['+', '-', '*', '/']">
         <label v-bind:class="{'selected-op': op == s}" >
-          <input type="radio" value="{{s}}" v-model="op"/>
+          <input type="radio" :value="s" v-model="op"/>
           {{s}}
         </label>
       </template>
@@ -27,7 +27,7 @@
 
     <div>
       B:
-      <numpad v-bind:num.sync="b"/>
+      <numpad :defnum="b" v-on:num-changed="onNumChangedB"/>
     </div>
 
     <div>

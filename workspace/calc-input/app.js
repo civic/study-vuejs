@@ -5,7 +5,7 @@ var vm = new Vue({
   el: '#app',
   data: {
     a: 1,
-    b: 0,
+    b: 2,
     op: null
   },
   components: {
@@ -29,6 +29,12 @@ var vm = new Vue({
   methods: {
     onClickOp: function(op){
       this.op = op;
+    },
+    onNumChangedA: function(num){
+      this.a = num;
+    },
+    onNumChangedB: function(num){
+      this.b = num;
     }
   }
 });
